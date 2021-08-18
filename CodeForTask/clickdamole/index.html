@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Read Before You Proceed</title>
+        Informed Consent
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type='text/javascript' src='index.js'></script>
+        </head>
+    <body>
+        <p>
+            You are invited to participate in a research study designed to investigate user experience. This study is being conducted by Timothy Meyer, a graduate student in the Cognitive and Information Sciences Department at University of California, Merced and Dr. Jeff Yoshimi, Professor of Cognitive Science, University of California, Merced. 
+        </p>
+        <p>
+        	PURPOSE: This study investigates dimensions of user experience.
+        </p>
+        <p>
+        	DESCRIPTION: In this study you will be performing a cognitive task requiring you to click stimuli as quickly and accurately as possible.  
+        </p>
+        <p>
+            PARTICIPATION: Your participation in this study is entirely voluntary. You are free to withdraw your participation at any time during the study, or refuse to answer any specific question, without penalty or withdrawal of benefit to which you are otherwise entitled.
+        </p>
+        <p>
+        	CONFIDENTIALITY OF DATA: As no identifying information will be collected, your name cannot be connected with your responses and hence your data will remain completely anonymous.
+        </p>
+        <p>
+        	DURATION: This experiment will take less than 15 minutes to complete.  
+        </p>
+        <p>
+        	RISKS AND BENEFITS: This study involves no foreseeable risks beyond those routinely encountered in daily life, nor any direct benefits to you as an individual. The results of the research may benefit the field of User Experience (UX) and thereby may indirectly benefit many of those on the user side of user interfaces. 
+        </p>
+        <p>
+        	COMPENSATION: You will be compensated for your participation with either SONA credit or m-Turk funds.
+        </p>
+        <p>
+        	CONTACT: If you have questions at any time about the study, you may contact Timothy Meyer at tmeyer3@ucmerced.edu If you feel you have not been treated according to the descriptions in this form, or your rights as a participant in research have been violated during the course of this project, you may contact the Human Subjects office at University of California Merced or Ramesh Balasubramaniam, irbchair@ucmerced.edu, Ph. no: 209-383-8655.
+        </p>
+        <p>
+            RESULTS: Results from this study will be available from Timothy Meyer at tmeyer3@ucmerced.edu after June 30, 2018.
+        </p>
+        <p>
+        	IRB APPROVED: This study has been approved by the Institutional Review Board of University California Merced. The University requires that you give your consent before participating in this study.
+        </p>
+        <p>
+        	Please fill out the questions at the bottom and place a check or an X in the space provided below to acknowledge that you are at least 18 years old and have read and understand the statements above. By marking the space below you give consent to participate voluntarily in this study. Thank you very much.
+        </p>
+        <br>
+
+
+        <form id="prelim" method="post">
+            <input type="radio" name="input_device" value="mouse"> mouse<br>
+            <input type="radio" name="input_device" value="trackpad"> trackpad<br>
+            <input type="radio" name="input_device" value="other"> other<br>
+            <br>
+            <input type="radio" name="consent" value="consent">
+            <label>Participant's consent</label>
+            <br>
+            <button onclick="return saveform(this.form)">Submit</button>
+        </form>
+        <br>
+    </body>
+</html>

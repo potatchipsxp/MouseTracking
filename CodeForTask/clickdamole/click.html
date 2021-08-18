@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Task Page</title>
+
+        <link rel='stylesheet' type='text/css' href='click.css'/>             
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="canvases">
+                <canvas id="canvas" width="800" height="800"></canvas>
+                <canvas id="canvas2" width="800" height="800"></canvas>
+                <canvas id="canvas3" width="800" height="800"></canvas>
+                <canvas id="canvas4" width="800" height="800"></canvas>
+            </div>
+            <div class="writing">
+                <p id="boring_instructions">
+                    In the upcoming game, a page will appear with a number of rectangles on it. Then inside one of those rectangles a circle will appear. The circle will quickly disappear again and then randomly reappear in a rectangle and not necessarily a different rectangle. Your job will be to try and click the circle as quickly as possible. If you click the circle it will turn black for a few milliseconds and then disappear again to reappear somewhere else. Once you have clicked the circle a number of times, you will complete that <q>level</q> of the game. Upon completing a level, you will be asked a series of questions about your level experience and then be taken back to the game to play the next level. With each advancement in level, the number of rectangles the circle can appear in will increase by one. Once you have passed the final level you will be taken to a debriefing screen where you will be thanked and debriefed. Do not click back or refresh the page during the game or your progress will be lost. <br> When you are ready, click the rectangle.
+                </p>
+                <p id="whackainst">
+                    In the upcoming game, a page will appear with a number of molehills on it. Then inside one of those molehills a mole will appear. The mole will quickly disappear again and then randomly reappear in a molehill and not necessarily a different molehill. Your job will be to try and click the mole as quickly as possible. If you click the mole it will animate unconciousness for a few milliseconds and then disappear again to reappear somewhere else. Once you have clicked the mole the required number of times, you will complete that <q>level</q> of the game. Upon completing a level, you will be asked a series of questions about your level experience and then be taken to a debriefing screen where you will fill out a final survey, be thanked and then debriefed. Do not click back or refresh the page during the game or your progress will be lost. <br> When you are ready, click the rectangle.
+                </p>
+            </div>
+            <div class="gameoverwriting">
+                <p id="gameover" name="gameover">
+                    Thank you for your participation. This was an experiment designed to examine user experience. If you would like to know more about this experiment or are curious about its results, contact Timothy Meyer at tmeyer3@ucmerced.edu. If you feel your rights were as a participant were violated you may contact: Ramesh Balasubramaniam, irbchair@ucmerced.edu, Ph. no: 209-383-8655.<br>
+
+                    Your payment code is:  <span id="key"></span>
+                </p>
+            </div>
+            <div class="wrap">
+                    <form id= "Qform" action="">
+                        <label class="statement">I felt really drawn into my gaming task.</label>
+                        <ul class='Q1'>
+                            <li>
+
+                                <label id="Q1right">Stongly agree</label>
+                                <input type="range" name="Q1ans" min="1" max="100" value="1" class="slider" id="Q1slider">
+                                <label id="Q1left">Strongly disagree</label>
+                            </li>
+                            <!-- <li>
+                                <input type="radio" name="Q1ans" value="2">
+                                <label>Disagree</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="Q1ans" value="3">
+                                <label>Neutral</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="Q1ans" value="4">
+                                <label>Agree</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="Q1ans" value="5">
+                                <label>Strongly agree</label>
+                            </li> -->
+                        </ul>
+                        <label class="statement">This gaming experience was demanding.</label>
+                        <ul class='Q2'>
+                            <li>
+
+                                <label id="Q2right">Stongly agree</label>
+                                <input type="range" name="Q2ans" min="1" max="100" value="1" class="slider" id="Q2slider">
+                                <label id="Q2left">Strongly disagree</label>
+                            </li>
+                            <!-- <li>
+                                <input type="radio" name="Q2ans" value="2">
+                                <label>Disagree</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="Q2ans" value="3">
+                                <label>Neutral</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="Q2ans" value="4">
+                                <label>Agree</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="Q2ans" value="5">
+                                <label>Strongly agree</label>
+                            </li> -->
+                        </ul>
+                        <label class="statement">My gaming experience was enjoyable</label>
+                        <ul class='Q3'>
+                            <li>
+
+                                <label id="Q3right">Stongly agree</label>
+                                <input type="range" name="Q3ans" min="1" max="100" value="1" class="slider" id="Q3slider">
+                                <label id="Q3left">Strongly disagree</label>
+                            </li>
+                            <!-- <li>
+                                <input type="radio" name="Q3ans" value="2">
+                                <label>Disagree</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="Q3ans" value="3">
+                                <label>Neutral</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="Q3ans" value="4">
+                                <label>Agree</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="Q3ans" value="5">
+                                <label>Strongly agree</label>
+                            </li> -->
+                        </ul>
+                        <div class="buttons">
+                        <button onclick="return backtoGame(Qform)">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="demogs">
+                    <form id="demogQs">
+                        <label>How old are you?</label>
+                        <br>
+                        <input type="text" name="age">
+                        <br>
+                        <label>What is your gender?</label>
+                        <br>
+                        <input type="radio" name="GenderQ" value="male">male<br>
+                        <input type="radio" name="GenderQ" value="female">female<br>
+                        <input type="radio" name="GenderQ" value="other">other<br>
+                        <br>
+                        <label>Is english your first language?</label>
+                        <br>
+                        <input type="radio" name="LangQ" value="yes">yes<br>
+                        <input type="radio" name="LangQ" value="no">no<br>
+                        <br>
+                        <label>How many letters are in the english alphabet?</label>
+                        <br>
+                        <input type="radio" name="CatchQ" value="20">20<br>
+                        <input type="radio" name="CatchQ" value="10">10<br>
+                        <input type="radio" name="CatchQ" value="58">58<br>
+                        <input type="radio" name="CatchQ" value="26">26<br>
+                        <br>
+                        <label>Growing up, how many hours per week did you play video games?</label>
+                        <br>
+                        <input type="radio" name="hoursplayedgrowingup" value="0">zero<br>
+                        <input type="radio" name="hoursplayedgrowingup" value="<1">less than one<br>
+                        <input type="radio" name="hoursplayedgrowingup" value="1-2">one to two<br>
+                        <input type="radio" name="hoursplayedgrowingup" value="2-4">two to four<br>
+                        <input type="radio" name="hoursplayedgrowingup" value="4-8">four to eight<br>
+                        <input type="radio" name="hoursplayedgrowingup" value=">8">more than 8<br>
+                        <br>
+                        <label>How many hours per week do you play video games now?</label>
+                        <br>
+                        <input type="radio" name="hoursplayednow" value="0">zero<br>
+                        <input type="radio" name="hoursplayednow" value="<1">less than one<br>
+                        <input type="radio" name="hoursplayednow" value="1-2">one to two<br>
+                        <input type="radio" name="hoursplayednow" value="2-4">two to four<br>
+                        <input type="radio" name="hoursplayednow" value="4-8">four to eight<br>
+                        <input type="radio" name="hoursplayednow" value=">8">more than 8<br>
+                        <br>
+                        <label>If you are reading this select the number 17</label>
+                        <br>
+                        <input type="radio" name="catchQ2" value="64">64<br>
+                        <input type="radio" name="catchQ2" value="9">9<br>
+                        <input type="radio" name="catchQ2" value="17">17<br>
+                        <input type="radio" name="catchQ2" value="39">39<br>
+                        <input type="radio" name="catchQ2" value="25">25<br>
+                        <input type="radio" name="catchQ2" value=">100">100<br>
+                        <br>
+                        <label>Did you develop any particular strategy for successfuly clicking the mole?</label>
+                        <br>
+                        <textarea name="strat" rows="4" cols="50"></textarea>
+                        <br>
+                        <br>
+                        <label>Do you have any feedback regarding your experience with the experiment? We plan to put this experiment on M-Turk.</label>
+                        <br>
+                        <textarea name="feedback" rows="4" cols="50"></textarea>
+                        <br>
+                        <br>
+                        <button onclick="return backtoGame(demogForm)">Submit</button>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                    </form>
+                </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type='text/javascript' src='clickFunctions.js'></script>
+        <script type='text/javascript' src='click.js'></script>
+    </body>
+</html>
